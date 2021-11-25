@@ -1,10 +1,12 @@
 {
-  "name": "gulp",
+  "name": "index",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp watch",
+    "build:dev": "gulp build",
+    "build:prod": "gulp build --prod"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,24 @@
   "bugs": {
     "url": "https://github.com/Pavel2593/gulp/issues"
   },
-  "homepage": "https://github.com/Pavel2593/gulp#readme"
+  "homepage": "https://github.com/Pavel2593/gulp#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/register": "^7.16.0",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.27.7",
+    "browserify": "^17.0.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^6.0.1",
+    "sass": "^1.43.5",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
 }
