@@ -1,4 +1,7 @@
 import test from './test';
 
 test();
-console.log('watch');
+
+$(document).ready(function () {
+    console.log($('body'));
+});

@@ -8,6 +8,8 @@ import config from './../config';
 const sass = gulpSass(sassCompiler);
 
 export const sassBuild = () => (
+    gulp.src(`${config.src.sass}/_lib/*`)
+        .pipe(gulp.dest(`${config.dest.sass}/lib`)),
     gulp.src(`${config.src.sass}/main.scss`)
         .pipe(sourcemaps.init())
         .pipe(sass())

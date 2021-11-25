@@ -7,6 +7,8 @@ import uglify from 'gulp-uglify';
 import config from './../config';
 
 export const scriptsBuild = () => (
+    gulp.src(`${config.src.js}/_lib/*`)
+        .pipe(gulp.dest(`${config.dest.js}/lib`)),
     browserify(`${config.src.js}/main.js`, { debug: true })
         .transform('babelify', { presets: ['@babel/preset-env'] })
         .bundle()
