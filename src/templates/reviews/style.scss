@@ -1,0 +1,119 @@
+.reviews {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 0;
+
+    &__title {
+        margin-bottom: 60px;
+        font-weight: 800;
+        text-align: center;
+        text-transform: uppercase;
+        color: $textBlack;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__item {
+        max-width: 320px;
+        margin: 0 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+        @media (max-width:1200px) {
+            margin: 0 auto;
+        }
+    }
+
+    &__text {
+        max-width: 320px;
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 20px;
+        box-sizing: border-box;
+        border-radius: 20px;
+        border: 1px solid #dcdcdc;
+        position: relative;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: "Circe";
+        color: $textBlack;
+
+        &::before,
+        &::after {
+            content: '';
+            border: 10px solid transparent;
+            border-left: 10px solid #dcdcdc;
+            border-top: 10px solid #dcdcdc;
+            position: absolute;
+            bottom: -21px;
+            left: 42px;
+        }
+
+        &::after {
+            border-left: 10px solid #fff;
+            border-top: 10px solid #fff;
+            left: 43px;
+            bottom: -19px;
+        }
+    }
+
+    .user {
+        display: flex;
+
+        &__photo {
+            width: 80px!important;
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        &__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__name {
+            display: block;
+            position: relative;
+            font-family: "Circe";
+            font-size: 20px;
+            font-weight: 800;
+            color: $textBlack;
+        }
+
+        &__age {
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            font-family: "Circe";
+            font-size: 12px;
+            font-weight: 300;
+            color: #909090;
+        }
+    }
+
+    
+    .owl-carousel .owl-stage {
+        display: flex;
+    }
+
+    .owl-carousel .owl-item {
+        display: flex;
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background-color: #ffdd0c;
+    }
+        
+    .owl-theme .owl-dots .owl-dot span {
+        background-color: #eaeaea;
+    }
+}

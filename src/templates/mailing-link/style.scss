@@ -1,0 +1,56 @@
+.mailing-link {
+    padding: 60px 15px;
+    box-sizing: border-box;
+    background-image: url('./../images/mailing-link/mailing-link-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media (max-width:370px) {
+        background-image: url('./../images/mailing-link/mobile-mailing-link-background.png');
+    }
+
+    &__text {
+        max-width: 850px;
+        margin: 0 auto 40px;
+        padding: 0 5px;
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+        color: $white;
+
+        @media (max-width:768px) {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+
+    &__btn {
+        width: 400px;
+        height: 90px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 22px;
+        line-height: 26px;
+        color: $white;
+        font-family: "Circe";
+        text-align: center;
+
+        background-image: linear-gradient(63deg, #12bc82 0%, #bfdf2b 100%);
+
+        @media (max-width:768px) {
+            width: 340px;
+            font-size: 20px;
+        }
+
+        @media (max-width: 370px) {
+            width: 100%;
+        }
+    }
+}
