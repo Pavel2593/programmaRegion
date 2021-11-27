@@ -12,5 +12,11 @@ export const htmlBuild = () => (
 )
 
 export const htmlWatch = () => {
-    gulp.watch(`${config.src.html}/**/*.html`, htmlBuild)
+    gulp.watch(
+        [
+            `${config.src.html}/**/*.html`,
+            `${config.src.root}/**/*.html`,
+        ],
+        htmlBuild
+    )
 }

@@ -9,7 +9,7 @@ const sass = gulpSass(sassCompiler);
 
 export const sassBuild = () => (
     gulp.src(`${config.src.sass}/_lib/*`)
-        .pipe(gulp.dest(`${config.dest.sass}/lib`)),
+        .pipe(gulp.dest(`${config.dest.css}/lib`)),
     gulp.src(`${config.src.sass}/main.scss`)
         .pipe(sourcemaps.init())
         .pipe(sass())
@@ -19,5 +19,11 @@ export const sassBuild = () => (
 )
 
 export const sassWatch = () => {
-    gulp.watch(`${config.src.sass}/**/*.scss`, sassBuild)
+    gulp.watch(
+        [
+            `${config.src.sass}/**/*.scss`,
+            `${config.src.root}/templates/**/*.scss`,
+        ],
+        sassBuild
+    )
 }

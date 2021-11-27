@@ -21,5 +21,11 @@ export const scriptsBuild = () => (
 )
 
 export const scriptsWatch = () => {
-    gulp.watch(`${config.src.js}/**/*.js`, scriptsBuild);
+    gulp.watch(
+        [
+            `${config.src.js}/**/*.js`,
+            `${config.src.root}/templates/**/*.js`,
+        ],
+        scriptsBuild
+    );
 }

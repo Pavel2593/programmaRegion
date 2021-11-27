@@ -8,7 +8,12 @@ h1, h2, h3, h4, h5, h6, a, p, span, label, input, button {
 
 h1 {}
 
-h2 {}
+h2 {
+    font-size: 40px;
+    @media (max-width:767px) {
+        font-size:30px;
+    }
+}
 
 h3 {}
 
@@ -34,4 +39,13 @@ input {
     padding: 0;
     border: none;
     outline: none;
+}
+
+.pg-wrapper {
+    max-width: 1440px;
+    width: 100%;
+    margin: {
+        right: auto;
+        left: auto;
+    };
 }
